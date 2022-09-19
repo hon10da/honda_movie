@@ -1,0 +1,278 @@
+body,
+html,
+.main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e2129;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.AboutUsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 15px;
+  font-size: 2rem;
+  color: goldenrod;
+  font-family: "Ubuntu", sans-serif;
+}
+.AboutUsPage p {
+  line-height: 60px;
+  color: #00acc1;
+}
+.AboutUsPage a {
+  text-decoration: none;
+  color: white;
+}
+.AboutUsPage button {
+  cursor: pointer;
+  color: white;
+  font-weight: bolder;
+  font-family: overpass;
+  background-color: #00acc1;
+
+  width: 300px;
+  height: 100px;
+  font-size: 3rem;
+  border-radius: 50px;
+  border: none;
+}
+.AboutUsPage button:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#toolBar {
+  height: 100%;
+  width: 95%;
+  display: flex;
+  color: goldenrod;
+  justify-content: space-between;
+  align-items: center;
+}
+#toolBar .logo {
+  margin-left: 120px;
+}
+.GenreList {
+  transform: translate(-250px, 110px);
+  width: 100px;
+  height: 150px;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #3b3f49;
+  position: absolute;
+  flex-direction: column;
+  animation: genreSlider 0.5s ease both;
+}
+.yearList {
+  z-index: 1;
+  transform: translate(0, 100px);
+  width: 400px;
+  height: 200px;
+  border-radius: 15px;
+  background-color: #3b3f49;
+  position: fixed;
+  flex-direction: column;
+  animation: YearSlider 0.5s ease-out both;
+}
+.yearList ul {
+  padding-top: 20px;
+  padding-left: 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  gap: 0;
+}
+.yearList li {
+  width: 70px;
+  height: 50px;
+  animation: AppearLate 0.02s 0.45s ease both;
+}
+@keyframes YearSlider {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 200px;
+  }
+}
+.inactive {
+  display: none;
+}
+.active {
+  display: flex;
+}
+@keyframes genreSlider {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 150px;
+  }
+}
+.GenreList a {
+  font-family: "Ubuntu";
+  animation: AppearLate 0.02s 0.45s ease both;
+}
+@keyframes AppearLate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.GenreList a:hover {
+  width: fit-content;
+  border-bottom: 1px solid white;
+  transform: scale(1.2);
+  transition: 0.1s;
+}
+#toolBar h1 {
+  font-size: 3rem;
+}
+.filters ul {
+  font-family: "Ubuntu";
+  font-size: 1.5rem;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+ul li:hover {
+  border-bottom: 1px solid white;
+}
+button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+  color: goldenrod;
+  background-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: goldenrod;
+}
+.Search {
+  font-family: "Ubuntu", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.Search label {
+  color: goldenrod;
+  font-size: 1.5rem;
+}
+.Search .searchWrapper {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.Search #SearchBar {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 2rem;
+  width: 90%;
+  height: 60px;
+  border: none;
+}
+.Search .Icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 10%;
+  height: 62px;
+  background-color: #00acc1;
+  border: none;
+}
+.Search .Icon img {
+  width: 40px;
+}
+.movies {
+  overflow: hidden;
+  gap: 40px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  border: 1px solid cyan;
+}
+.movies .movieCard {
+  color: goldenrod;
+  padding: 2px;
+  width: 200px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: appearfromnowhere 0.2s ease-out both;
+}
+@keyframes appearfromnowhere {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.movies .movieCard:hover {
+  border: 1.5px solid cyan;
+  transition: 0.2s;
+  transform: scale(1.05);
+  border-radius: 15px;
+  box-shadow: 0 0 140px 90px goldenrod;
+}
+.movies .movieCard .Star {
+  content: url(../../images/star.png);
+  width: 10px;
+}
+.movies a {
+  margin-bottom: 0px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: goldenrod;
+}
+.movies a:hover {
+  color: cyan;
+  scale: 1.3;
+  transition: all 0.1s;
+}
+.movies button {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(86, 95, 119);
+  width: 90%;
+  height: 40px;
+}
+.moviepic img {
+  border-radius: 15px;
+  width: 200px;
+  height: 280px;
+}
+ul {
+  list-style: none;
+}

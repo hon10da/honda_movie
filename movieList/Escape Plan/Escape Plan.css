@@ -1,0 +1,252 @@
+body,
+html,
+.main {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1700px;
+  background-color: #1e2129;
+}
+html {
+  scroll-behavior: smooth;
+}
+.main {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-direction: column;
+}
+.active {
+  display: block;
+}
+.goBack a {
+  font-size: 1.5rem;
+  color: goldenrod;
+  text-decoration: none;
+}
+.goBack a :hover {
+  transform: scale(1.2);
+  transition: 0.1s all;
+}
+/* ================================================
+          video
+============================================== */
+iframe {
+  top: 950px;
+  position: absolute;
+  margin: 20px;
+  min-height: 712px;
+  width: 95%;
+  display: none;
+  animation: slidefromtop 1s ease-out both;
+}
+@keyframes slidefromtop {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+/* ================================================
+          info
+============================================== */
+.Info {
+  margin-left: 5px;
+  width: 95%;
+  overflow-y: hidden;
+  height: 800px;
+}
+.background {
+  z-index: 0;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 740px;
+  opacity: 0.1;
+  background-image: url(share.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body::-webkit-scrollbar,
+.content::-webkit-scrollbar {
+  display: none;
+}
+/* ================================================
+          inner Info
+============================================== */
+.content {
+  padding: 40px;
+  font-family: "Roboto";
+  text-align: center;
+  color: goldenrod;
+  display: grid;
+  height: 700px;
+  border: 1px solid cyan;
+  grid-template-columns: 40% 60%;
+}
+.content img {
+  border-radius: 10px;
+  width: 350px;
+  grid-area: img;
+  opacity: 1;
+  height: 440px;
+}
+#title {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+#MovieInfo {
+  text-align: left;
+  font-size: 1.2rem;
+}
+#MoreInfo {
+  word-wrap: break-word;
+  z-index: 1;
+  position: absolute;
+  padding: 10px;
+  margin-top: 15px;
+  text-align: left;
+  flex-direction: column;
+  width: 900px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40% 30% 30%;
+  font-size: 1.7rem;
+}
+#MoreInfo p {
+  margin: 10px;
+}
+#Genre {
+  max-width: 300px;
+  height: fit-content;
+}
+span {
+  font-weight: bolder;
+}
+#MoreInfo a {
+  text-decoration: none;
+  color: goldenrod;
+}
+#MoreInfo a:hover {
+  color: cyan;
+  transition: 0.5s;
+}
+.button-wrapper {
+  position: absolute;
+  width: 40%;
+  max-width: 600px;
+}
+.Watch {
+  max-width: 350px;
+  z-index: 1;
+  margin-top: 20px;
+  font-family: Ubuntu;
+  grid-area: btn;
+  background-color: rgba(86, 95, 119);
+  color: goldenrod;
+  border-radius: 100px;
+  border: none;
+  font-size: 2rem;
+  height: 50px;
+  width: 60%;
+}
+.Watch:hover {
+  transition: all 0.1s;
+  scale: 1.1;
+}
+.Watch:active {
+  transition: all 0.1s;
+  scale: 0.9;
+}
+/* ================================================
+          Others RECOOmndations
+============================================== */
+.movies .movieCard .Star {
+  content: url(../../images/star.png);
+  width: 10px;
+}
+.Other {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: goldenrod;
+}
+.movies {
+  gap: 20px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border: 1px solid cyan;
+}
+.movies .movieCard {
+  color: goldenrod;
+  padding: 2px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.moviepic img {
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+}
+.movies button {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: goldenrod;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(86, 95, 119);
+  width: 90%;
+  height: 40px;
+}
+.movies a {
+  margin-bottom: 0px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: goldenrod;
+}
+.movies a:hover {
+  color: cyan;
+  scale: 1.3;
+  transition: all 0.1s;
+}
+ul {
+  list-style: none;
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
+  .Info {
+    height: 890px;
+  }
+  .background {
+    display: none;
+  }
+  .content {
+    height: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+  }
+  .content img {
+    width: 150px;
+    height: 240px;
+  }
+  .button-wrapper {
+    position: static;
+    width: 100%;
+  }
+  iframe {
+    top: 1100px;
+  }
+}
